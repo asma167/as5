@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Tracker & Animation Challenge</title>
+
+  <style>
+    
+    body {
+      background-image: url('https://files.catbox.moe/fpxwou.gif');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+      color: #333333;
+      margin: 0;
+      padding: 20px;
+    }
+
+   
+    .container {
+      background-color: rgba(255, 255, 255, 0.92);
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+   
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      margin-top: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+   
+    #taskList li {
+      cursor: pointer;
+      padding: 6px;
+      margin-bottom: 4px;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+
+    #taskList li:hover {
+      background-color: rgba(255, 0, 0, 0.1);
+      text-decoration: line-through;
+      color: #a00;
+    }
+
+    
+    .cursor-gif {
+      position: fixed;
+      pointer-events: none;
+      width: 64px;
+      height: 64px;
+      transform: translate(-50%, -50%);
+      animation: fadeAndOut 0.8s linear forwards;
+      z-index: 9999;
+    }
+
+    @keyframes fadeAndOut {
+      0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -30px) scale(0.5);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    
+    <header style="text-align: center;">
+      <h1>My Animation Showcase 🎬</h1>
+      
+      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 15px;">
+        <!-- Animation 1 -->
+        <video width="260" autoplay loop muted playsinline style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <source src="https://files.catbox.moe/ya35yw.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- Animation 2 -->
+        <video width="260" autoplay loop muted playsinline style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <source src="https://files.catbox.moe/mipwfw.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </header>
+
+    <hr style="margin: 25px 0;">
+
+   
+    <section>
+      <h2>🔥 Monthly Animation Challenge</h2>
+      <p>I must complete these 3 target animations this month to win the challenge!</p>
+
+      <form>
+        <div>
+          <input type="checkbox" id="goal1">
+          <label for="goal1"><strong>Goal 1:</strong> Character Blink & Eye Movement Animation</label>
+        </div>
+        <br>
+        <div>
+          <input type="checkbox" id="goal2">
+          <label for="goal2"><strong>Goal 2:</strong> Hair & Wind Physics Loop Animation</label>
+        </div>
+        <br>
+        <div>
+          <input type="checkbox" id="goal3">
+          <label for="goal3"><strong>Goal 3:</strong> Lip Sync / Expressions Animation</label>
+        </div>
+      </form>
+    </section>
+
+    <hr style="margin: 25px 0;">
+
+   
+    <section>
+      <h2>📝 My Daily Tasks</h2>
+      <p style="font-size: 13px; color: #666;">Tip: Click on any task to delete it!</p>
+      
+      <form onsubmit="event.preventDefault();">
+        <label for="taskInput">Write a task or reminder:</label><br><br>
+        <textarea id="taskInput" name="note" rows="3" placeholder="Type your tasks here..."></textarea><br>
+        <button type="button" id="addTaskBtn">Add Task</button>
+      </form>
+
+      <h3>Current Tasks:</h3>
+      <ul id="taskList">
+        <li>Review HTML tags and structure</li>
+        <li>Read 5 pages of a book</li>
+        <li>Organize study desk and workspace</li>
+      </ul>
+    </section>
+
+    <hr style="margin: 25px 0;">
+
+   
+    <section>
+      <h2>💡 Ideas to Use Your Time Productively</h2>
+      <p>Got extra time? Try one of these quick productive activities:</p>
+
+      <ol>
+        <li>Learn 5 new vocabulary words in a foreign language.</li>
+        <li>Do a 10-minute full-body stretch.</li>
+        <li>Listen to an educational podcast episode.</li>
+        <li>Draft your goals for next week.</li>
+      </ol>
+    </section>
+
+  </div>
+
+</body>
+</html>
